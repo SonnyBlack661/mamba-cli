@@ -1,0 +1,19 @@
+# OSX
+#
+.DS_Store
+npm-debug.log
+npm-debug.log*
+coverage
+.nyc_output
+package-lock.json
+node_modules
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+testgrounds
+generated
+yarn-error.log
+build
+.vscode
