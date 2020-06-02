@@ -2,8 +2,10 @@
   "extends": ["tslint-config-standard", "tslint-config-prettier"],
   "rules": {
     "strict-type-predicates": false,
-    "no-consecutive-blank-lines": true,
-    "prettier": true
+    "no-consecutive-blank-lines": true
+  },
+  "linterOptions": {
+    "exclude": ["src/templates/**/*.ejs"]
   },
   "env": {
     "jest": true

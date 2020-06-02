@@ -11,15 +11,15 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "format": "prettier --write **/*.{js,ts,tsx,json}",
+    "format": "prettier --write \"{**/*.ts,**/*.js/**/*.js}\" --loglevel error && tslint -p . --fix",
     "lint": "tslint -p .",
     "clean-build": "rm -rf ./build",
     "compile": "tsc -p .",
     "copy-templates": "if [ -e ./src/templates ]; then cp -a ./src/templates ./build/; fi",
     "build": "yarn format && yarn lint && yarn clean-build && yarn compile && yarn copy-templates",
     "prepublishOnly": "yarn build",
-    "test": "jest",
-    "watch": "jest --watch",
+    "test": "jest tests/fast",
+    "watch": "jest tests/fast --watch",
     "snapupdate": "jest --updateSnapshot",
     "coverage": "jest --coverage"
   },

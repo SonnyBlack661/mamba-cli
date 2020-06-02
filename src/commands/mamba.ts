@@ -1,7 +1,7 @@
 import { GluegunCommand } from 'gluegun';
 
 const command: GluegunCommand = {
-  name: 'mamba',
+  description: '🐍 MAMBA CLI 🐍',
   run: async (toolbox) => {
     const { print } = toolbox;
 
