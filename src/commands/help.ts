@@ -7,10 +7,11 @@ module.exports = {
   run: async (toolbox: GluegunToolbox) => {
     const {
       print: { info },
+      meta,
     } = toolbox;
 
     info('');
-    require('../lib/header')();
-    info('');
+    require('../lib/header')(meta.version());
+    info(``);
   },
 };
