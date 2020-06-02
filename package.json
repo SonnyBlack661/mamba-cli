@@ -50,7 +50,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "glob": "^7.1.6",
-    "gluegun": "latest"
+    "gluegun": "latest",
+    "pretty-error": "^2.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
