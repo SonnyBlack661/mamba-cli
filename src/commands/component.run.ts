@@ -4,9 +4,9 @@ module.exports = {
   description: 'Run isolated component',
   hidden: false,
   dashed: false,
-  run: async toolbox => {
+  run: async (toolbox) => {
     const { print } = toolbox;
 
-    print.info(`component run`);
+    print.info(`Component run ${process.cwd()}`);
   },
 };
