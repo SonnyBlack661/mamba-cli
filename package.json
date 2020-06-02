@@ -49,18 +49,20 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "commitizen": "^4.1.2",
     "glob": "^7.1.6",
-    "gluegun": "latest",
-    "husky": "^4.2.5"
+    "gluegun": "latest"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@commitlint/config-lerna-scopes": "^8.3.4",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.11",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "git-cz": "^4.6.2",
+    "husky": "^4.2.5",
     "jest": "^24.1.0",
+    "lint-staged": "^10.2.7",
     "prettier": "^1.12.1",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
@@ -68,6 +70,32 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.6.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "tslint --fix",
+      "git add"
+    ],
+    "*.md": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "ts-jest",

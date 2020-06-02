@@ -9,13 +9,12 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "sourceMap": true,
-    "inlineSourceMap": true,
     "outDir": "build",
+    "declaration": true,
+    "declarationDir": "build/types",
     "strict": false,
     "target": "es5",
-    "pretty": true,
-    "declaration": true,
-    "declarationDir": "build/types"
+    "pretty": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.test.ts", "src/**/*.ejs", "src/templates/**/*.ejs"]
