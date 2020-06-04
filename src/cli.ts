@@ -13,7 +13,7 @@ async function run(argv) {
     .src(__dirname)
     .plugins('./node_modules', { matching: 'mamba-cli-*', hidden: true })
     .version() // provides default for version, v, --version, -v
-    .exclude(['http'])
+    .exclude(['http', 'strings'])
     .create();
 
   // run it
